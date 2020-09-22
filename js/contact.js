@@ -55,7 +55,7 @@ $(document).ready(function () {
       if (validator()) {
         
         console.log("Form Submitted");
-        $("#Myrejistrationorm").submit();
+        $("#rejistration").submit();
         alert("Thank you for Submission");
         //var formData = $(this).serializeArray();
         //console.log(formData);
@@ -68,23 +68,23 @@ $(document).ready(function () {
     function validator() {
       var fullName = $("#FullName").val();
       var email = $("#Email").val();
-      var phone = $("#Subject").val();
+      var subject = $("#Subject").val();
       var message = $("#Message").val();
       var emailValidator = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
       //console.log("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;");
       //console.log("FullName : "+fullName);
       // console.log("Email : "+email);
-    /*  if (!emailValidator.test(email)) {
+     if (!emailValidator.test(email)) {
         alert("Invalid Email ID...!!!!!");
         return false;
-      } else if (phone.length !== 10) {
-        alert("Please enter the correct mobile No...!!!!! ");
+      }else if (subject== "") {
+        alert("Please enter subject...!!!!! ");
       } else if (message === "") {
         alert("Enter Something");
         return false;
       } else {
         return true;
-      }*/
+      }
     }
     
   });
